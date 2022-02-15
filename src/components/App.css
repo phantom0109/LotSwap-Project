@@ -1,0 +1,43 @@
+/* Styles go here */
+body {
+  color: rgb(255, 255, 255);
+  background: radial-gradient(50% 50% at 50% 50%,#3310ce7e 0,rgba(255,255,255,0) 100%); 
+  
+  background-color: rgb(33, 36, 41);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  font-weight: normal;
+
+  line-height: 1em;
+  margin: 0;
+}
+
+.container-card {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  background: rgb(33, 44, 55);
+  color: white;
+  box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px,
+    rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+  border-radius: 24px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.swap-btn {
+  height: 60px;
+  width: 100%;
+  border: none;
+  border-radius: 9999px;
+  background-color: #541ccd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+}

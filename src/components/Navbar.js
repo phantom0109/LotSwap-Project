@@ -322,11 +322,11 @@ const Navbar = (props) => {
             )}
           </Popper>
         </div>
-        <div className={classes.accountBtnContainer}>
+        <div className={classes.accountBtnContainer} onClick={() => { if(props.account === "") props.connectWallet() }}>
           <div className={classes.accountBtn}>
             {props.account !== ""
               ? replaceBetween(6, 38, "...", props.account)
-              : ""}
+              : "Connect Wallet"}
           </div>
         </div>
       </div>

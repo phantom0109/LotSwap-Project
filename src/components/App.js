@@ -11,11 +11,14 @@ import Moralis from "moralis";
 
 class App extends Component {
   async componentWillMount() {
+    await this.connectWallet()
+  }
+  async connectWallet () {
     await this.loadWeb3();
     await this.loadBlockchaindata();
-  }
-
+  }  
   async loadBlockchaindata(type = "eth") {
+    if(!window.web3) return;
     const web3 = window.web3;
     const accounts = await web3.eth.getAccounts();
 
@@ -251,7 +254,8 @@ class App extends Component {
         <Navbar
           account={this.state.account}
           changeNetwork={this.switchNetwork}
-          currentNetwork={this.state.currentNetwork}  
+          currentNetwork={this.state.currentNetwork}
+          connectWallet={() => this.connectWallet()}
         />
         <div className="container-fluid mt-5">
           <div className="row">

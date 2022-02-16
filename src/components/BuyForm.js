@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import CoinField from "./CoinField";
-
 class BuyForm extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +16,7 @@ class BuyForm extends Component {
     //  console.log('currentNetwork6789098788=>', props.currentNetwork);
     //}
   }
+
   componentWillReceiveProps(nextProps) {
     this.setState({currentNetwork: nextProps.currentNetwork})
   }
@@ -125,7 +125,7 @@ class BuyForm extends Component {
         <button
           type="submit"
           id="swap-button"
-          disabled=""
+          disabled={this.state.currentTokenTo === "defaultToken" ? true : false}
           className={"swap-btn"}
         >
           <div className="css-10ob8xa">LOTSWAP!</div>
